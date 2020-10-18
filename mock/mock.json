@@ -1,0 +1,25 @@
+{
+    "clients": [
+        {
+            "id": "1",
+            "nome": "Maikon Canuto",
+            "idade": "24",
+            "status": true, 
+            "email": "mcp@email.com"
+        },
+        {
+            "id": "2",
+            "nome": "Chayenne Ximenes",
+            "idade": "23",
+            "status": true, 
+            "email": "chay@email.com"
+        },
+        {
+            "id": "3",
+            "nome": "Jessica",
+            "idade": "24",
+            "status": true, 
+            "email": "jessica@email.com"
+        }
+    ]
+}
