@@ -16,6 +16,9 @@ export default function AppComponent() {
                 <li>
                     <Link to="/clients/create">Adicionar Client</Link>
                 </li>
+                <li>
+                    <Link to="/dash">Inicio</Link>
+                </li>
             </ul>
         </div>
 

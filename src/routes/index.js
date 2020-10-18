@@ -1,16 +1,16 @@
-import React, {Suspense, lazy} from 'react';
+import React, {Suspense} from 'react';
 import {Switch, Route } from 'react-router-dom';
 
-const ClientListLazyComponent = lazy(() => import('../features/client/components/client-list'));
-const ClientCreateLazyComponent = lazy(() => import('../features/client/components/client-create'));
+import clientRoutes from '../features/client/route';
+import dashboardRoutes from '../features/dashboard/route';
 
 export default function Routes() {
 
     return <>
         <Switch>
             <Suspense fallback={<h1>Carregando...</h1>}>
-                <Route component={ () => <ClientListLazyComponent/> }  exact path='/clients' />
-                <Route component={ () => <ClientCreateLazyComponent /> } exact path='/clients/create' />
+                { clientRoutes.map(route => (<Route component={route.component} exact={route.exact} path={route.path}/> ))}
+                { dashboardRoutes.map(route => (<Route component={route.component} exact={route.exact} path={route.path}/> ))}
             </Suspense>
         </Switch>
     </>;
